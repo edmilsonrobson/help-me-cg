@@ -13,10 +13,14 @@ function calculateQuaternions(){
 	var response = "";
 	for (i = 0 ; i < 4 ; i++){
 		for (j = 0 ; j < 4 ; j++){
-			response = response + " " + Math.round(items[i][j] * 100) / 100;
+			response = response + " " + roundToTwo(items[i][j]);
 		}
 		response = response + "\n";
 	}
 
 	alert(response);
+}
+
+function roundToTwo(num) {    
+    return +(Math.round(num + "e+2")  + "e-2");
 }
