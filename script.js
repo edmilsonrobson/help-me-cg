@@ -13,7 +13,7 @@ function calculateQuaternions(){
 	var response = "";
 	for (i = 0 ; i < 4 ; i++){
 		for (j = 0 ; j < 4 ; j++){
-			response = response + " " + items[i][j];
+			response = response + " " + Math.round(items[i][j] * 100) / 100;
 		}
 		response = response + "\n";
 	}
